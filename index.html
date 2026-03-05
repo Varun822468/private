@@ -42,13 +42,27 @@ font-size:16px;
 color:#00bcd4;
 }
 
-/* ISSUE: Navbar disappears on small screens */
-@media(max-width:768px){
-
-.nav-links{
-display:none;
+.hamburger {
+display: none;
+background: none;
+border: none;
+color: white;
+font-size: 24px;
+cursor: pointer;
 }
 
+@media(max-width:768px){
+.nav-links{
+display:none;
+position: absolute;
+top: 70px;
+left: 0;
+background: #222;
+flex-direction: column;
+width: 100%;
+text-align: center;
+}
+.hamburger { display: block; }
 }
 
 .hero{
@@ -57,7 +71,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-background:linear-gradient(120deg,#00bcd4,#673ab7);
+background: linear-gradient(120deg, #00bcd4, #673ab7);
 color:white;
 text-align:center;
 }
@@ -89,6 +103,7 @@ cursor:pointer;
 <nav class="navbar">
 
 <div class="logo">MySite</div>
+<button class="hamburger" aria-label="Toggle navigation">☰</button>
 
 <ul class="nav-links">
 <li><a href="#">Home</a></li>
@@ -101,12 +116,4 @@ cursor:pointer;
 
 <section class="hero">
 
-<h1>Welcome to My Landing Page</h1>
-<p>Build modern websites easily</p>
-
-<button class="btn">Get Started</button>
-
-</section>
-
-</body>
-</html>
+<h1>Welcome
