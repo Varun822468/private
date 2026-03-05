@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+background:#222;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:white;
+font-size:22px;
+font-weight:bold;
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+.nav-links li a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+.nav-links li a:hover{
+color:#00bcd4;
+}
+
+/* ISSUE: Navbar disappears on small screens */
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+}
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(120deg,#00bcd4,#673ab7);
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.btn{
+padding:12px 25px;
+background:white;
+color:#333;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">MySite</div>
+
+<ul class="nav-links">
+<li><a href="#">Home</a></li>
+<li><a href="#">Features</a></li>
+<li><a href="#">Pricing</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>Welcome to My Landing Page</h1>
+<p>Build modern websites easily</p>
+
+<button class="btn">Get Started</button>
+
+</section>
+
+</body>
+</html>
